@@ -1,9 +1,9 @@
-<div class="skills-container h-full w-full flex mt-20">
-  <div class="skills-list w-[40%] h-[250px]">
+<div class="skills-container h-full w-full flex flex-col sm:flex-row mt-20">
+  <div class="skills-list w-[100%] sm:w-[40%] h-[250px]">
     <ul class="flex flex-col h-full">
       @for (option of skillOptions; track $index) {
       <li
-        class="text-2xl flex flex-grow items-center hover:border-b-[2px] hover:border-primary transition-transform duration-200 active:scale-100 active:duration-0 hover:scale-95 hover:bg-primary hover:bg-opacity-15 hover:pl-[10px] animate-fadeIn cursor-pointer"
+        class="text-2xl flex flex-grow  items-center hover:border-b-[2px] hover:border-primary transition-transform duration-200 active:scale-100 active:duration-0 hover:scale-95 hover:bg-primary hover:bg-opacity-15 hover:pl-[10px] animate-fadeIn cursor-pointer"
         [ngClass]="{
           'hover:border-b-[2px] hover:border-primary hover:scale-95 hover:bg-primary hover:bg-opacity-15 hover:pl-[10px]': true,
           'border-b-[2px] border-primary scale-95 bg-primary bg-opacity-15 pl-[10px]':
@@ -21,7 +21,7 @@
   </div>
 
   <div class="skills-item-list flex-grow">
-    <ul class="h-full w-full grid grid-cols-5">
+    <ul class="h-full w-full grid grid-cols-3 sm:grid-cols-5">
       @for (item of skillItemsToShow; track $index) {
       <li
         class="h-full flex flex-col items-center mt-5 cursor-pointer text-grey hover:text-primary hover:scale-105 transition-transform duration-150 hover:font-bold active:duration-0 active:scale-100"
