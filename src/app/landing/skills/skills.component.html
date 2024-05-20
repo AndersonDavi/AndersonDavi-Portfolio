@@ -1,1 +1,42 @@
-<p>skills works!</p>,
+<div class="skills-container h-full w-full flex mt-20">
+  <div class="skills-list w-[40%] h-[250px]">
+    <ul class="flex flex-col h-full">
+      @for (option of skillOptions; track $index) {
+      <li
+        class="text-2xl flex flex-grow items-center hover:border-b-[2px] hover:border-primary transition-transform duration-200 active:scale-100 active:duration-0 hover:scale-95 hover:bg-primary hover:bg-opacity-15 hover:pl-[10px] animate-fadeIn cursor-pointer"
+        [ngClass]="{
+          'hover:border-b-[2px] hover:border-primary hover:scale-95 hover:bg-primary hover:bg-opacity-15 hover:pl-[10px]': true,
+          'border-b-[2px] border-primary scale-95 bg-primary bg-opacity-15 pl-[10px]':
+            lastHoverOption === option
+        }"
+        [ngStyle]=""
+        (mouseenter)="hoverOption(option)"
+      >
+        <span class="pointer-events-none">
+          {{ option }}
+        </span>
+      </li>
+      }
+    </ul>
+  </div>
+
+  <div class="skills-item-list flex-grow">
+    <ul class="h-full w-full grid grid-cols-5">
+      @for (item of skillItemsToShow; track $index) {
+      <li
+        class="h-full flex flex-col items-center mt-5 cursor-pointer text-grey hover:text-primary hover:scale-105 transition-transform duration-150 hover:font-bold active:duration-0 active:scale-100"
+      >
+        <img
+          [src]="item.img"
+          [alt]="item.name"
+          class="h-[90px] pb-5 transition-transform duration-150"
+        />
+        <p class="transition-transform duration-150">
+          {{ item.name }}
+        </p>
+      </li>
+
+      }
+    </ul>
+  </div>
+</div>
