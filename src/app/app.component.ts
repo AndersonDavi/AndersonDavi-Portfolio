@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ThreeComponent } from './three/three.component';
 import { NavbarComponent } from './landing/components/navbar/navbar.component';
-import { SkillsComponent } from './landing/skills/skills.component';
+import { SkillsComponent } from './landing/components/skills/skills.component';
 
 @Component({
   selector: 'app-root',
