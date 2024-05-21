@@ -2,10 +2,10 @@
 <div class="h-[60px]"></div>
 <section
   id="home"
-  class="h-[100vh] flex flex-grow sm:flex-grow-0 flex-col sm:flex-row sm:w-full px-5 sm:px-0"
+  class="h-[100vh] flex flex-grow md:flex-grow-0 flex-col md:flex-row md:w-full px-5 md:px-0"
 >
   <div
-    class="w-full flex-grow flex flex-col items-center sm:items-start sm:justify-center justify-evenly sm:pl-8"
+    class="h-full w-full flex-grow flex flex-col items-center md:items-start md:justify-center justify-center md:pl-8"
   >
     <h2 class="text-center text-6xl mb-3 font-semibold">
       <!-- <span>Anderson David</span> -->
@@ -41,7 +41,7 @@
         class="hover:text-primary hover:text-7xl cursor-default hover:transition-transform duration-75 hover:inline"
         >n
       </span>
-      <br class="sm:hidden" />
+      <br class="md:hidden" />
       <span
         class="hover:text-primary hover:text-7xl cursor-default hover:transition-transform duration-75 hover:inline"
         >D</span
@@ -63,17 +63,21 @@
         >d</span
       >
     </h2>
-    <p class="text-2xl mb-3 font-thin text-grey">Desarrollador Front-end</p>
-    <p class="w-[50%] sm:w-[450px] border-b-2 border-solid border-primary"></p>
+    <p class="text-3xl md:text-2xl mb-3 font-thin text-grey mt-12 md:mt-0">
+      Desarrollador Front-end
+    </p>
+    <p
+      class="w-[50%] md:w-[450px] border-b-2 border-solid border-primary mt-12 md:mt-0"
+    ></p>
   </div>
   <div
-    class="sm:w-[130px] flex flex-grow sm:flex-col sm:items-center justify-center"
+    class="h-[500px] md:h-full w-full md:w-[130px] flex md:flex-grow md:flex-col md:items-center justify-center"
   >
     <a href="https://github.com/AndersonDavi" target="_blank">
       <img
         src="assets/github.svg"
         alt="github"
-        class="h-[40px] my-3 hover:scale-110 mx-5 sm:mx-0"
+        class="h-[60px] md:h-[40px] my-3 hover:scale-110 mx-5 md:mx-0"
       />
     </a>
     <a
@@ -83,12 +87,12 @@
       <img
         src="assets/linkedin.svg"
         alt="github"
-        class="h-[40px] my-3 hover:scale-110 mx-5 sm:mx-0"
+        class="h-[60px] md:h-[40px] my-3 hover:scale-110 mx-5 md:mx-0"
       />
     </a>
   </div>
 </section>
-<section id="conocimientos" class="px-8 h-[100vh]">
+<section id="conocimientos" class="pt-4 px-8 h-[100vh]">
   <div>
     <h2 class="text-6xl mb-3 font-semibold">Conocimientos</h2>
     <p class="text-2xl mb-3 font-thin text-grey">
@@ -97,5 +101,33 @@
   </div>
   <app-skills />
 </section>
-
+<section
+  id="contactame"
+  class="pt-4 px-8 flex flex-col items-center justify-center h-[100vh]"
+>
+  <h2 class="text-center text-6xl mb-3 font-semibold my-5">Contactame</h2>
+  <p class="text-3xl mb-3 font-thin text-grey my-5">
+    andesondavid17&#64;gmail.com
+  </p>
+  <p class="w-[50%] border-b-2 border-primary my-5"></p>
+  <div class="w-full flex justify-center my-5">
+    <a href="https://github.com/AndersonDavi" target="_blank">
+      <img
+        src="assets/github.svg"
+        alt="github"
+        class="h-[60px] md:h-[40px] my-3 hover:scale-110 mx-5"
+      />
+    </a>
+    <a
+      href="https://www.linkedin.com/in/anderson-david-rueda-consuegra-16b32821b/"
+      target="_blank"
+    >
+      <img
+        src="assets/linkedin.svg"
+        alt="github"
+        class="h-[60px] md:h-[40px] my-3 hover:scale-110 mx-5"
+      />
+    </a>
+  </div>
+</section>
 <app-three />
