@@ -4,17 +4,20 @@
   <img
     [src]="selectecWork?.image"
     alt="work"
-    class="col-span-3 w-full h-[500px] border-primary border-2 object-cover object-center hover:border-[0.3rem] transition-all hover:cursor-pointer order-1 "
+    class="col-span-3 w-full h-[500px] border-primary border-2 object-cover object-center hover:border-[0.3rem] transition-all hover:cursor-pointer order-1  md:mt-0"
   />
   <ul
-    class="col-span-1 w-full h-full flex md:flex-col gap-3 md:min-h-[400px] px-2 row-span-2 mb-6 md:mb-0 overflow-x-clip"
+    class="col-span-1 w-full h-full flex md:flex-col gap-3 md:min-h-[400px] px-2 row-span-1 mb-6 md:mb-0
+    overflow-x-scroll scroll-smooth scroll md:overflow-x-hidden"
   >
     @for (work of worksList; track $index) {
     <li
-      class="border-primary border-2 border-opacity-25 rounded h-[150px] flex items-center justify-center p-4 transition-all active:p-4 hover:border-[3px] cursor-pointer hover:border-opacity-75 w-[350px]"
+      class="border-primary border-2 border-opacity-25 rounded h-[150px] flex items-center justify-center p-5 transition-all active:p-4 hover:border-[3px] cursor-pointer hover:border-opacity-75  md:min-w-0 md:relative md:left-0 md:right-0 w-[150px] min-w-[150px] md:w-full"
       [ngClass]="{
-        'border-opacity-90 bg-primary bg-opacity-15 border-[2px]  p-3':
-          selectecWork?.title === work.title
+        'border-opacity-90 bg-primary bg-opacity-15 border-[2px] p-[12px]':
+          selectecWork?.id === work.id,
+        '-left-[95%]': work.id < selectecWork!.id,
+        '-right-[95%]': work.id > selectecWork!.id
       }"
       (click)="hoverItem(work)"
     >
@@ -26,7 +29,7 @@
     </li>
     }
   </ul>
-  <div class="work-info flex w-full pl-6 mt-8 col-span-3 order-1">
+  <div class="work-info flex w-full pl-6 mt-8 col-span-3 order-1 min-h-[350px]">
     <div class="work-desc w-full flex flex-col pr-6">
       <div class="w-full">
         <button
