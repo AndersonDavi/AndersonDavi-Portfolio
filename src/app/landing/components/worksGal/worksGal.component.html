@@ -1,15 +1,41 @@
-<div class="works-container h-full flex flex-col w-full">
+<div
+  class="works-container h-full w-full grid grid-cols-1 md:grid-cols-4 grid-rows-2"
+>
   <img
     [src]="selectecWork?.image"
     alt="work"
-    class="w-full h-[500px] border-primary border-2 object-cover object-center hover:border-[0.3rem] transition-all hover:cursor-pointer"
+    class="col-span-3 w-full h-[500px] border-primary border-2 object-cover object-center hover:border-[0.3rem] transition-all hover:cursor-pointer order-1 "
   />
-  <div class="work-info flex w-full pl-6 mt-8">
+  <ul
+    class="col-span-1 w-full h-full flex md:flex-col gap-3 md:min-h-[400px] px-2 row-span-2 mb-6 md:mb-0 overflow-x-clip"
+  >
+    @for (work of worksList; track $index) {
+    <li
+      class="border-primary border-2 border-opacity-25 rounded h-[150px] flex items-center justify-center p-4 transition-all active:p-4 hover:border-[3px] cursor-pointer hover:border-opacity-75 w-[350px]"
+      [ngClass]="{
+        'border-opacity-90 bg-primary bg-opacity-15 border-[2px]  p-3':
+          selectecWork?.title === work.title
+      }"
+      (click)="hoverItem(work)"
+    >
+      <img
+        [src]="work.logo"
+        [alt]="work.title"
+        class="w-full h-full object-contain"
+      />
+    </li>
+    }
+  </ul>
+  <div class="work-info flex w-full pl-6 mt-8 col-span-3 order-1">
     <div class="work-desc w-full flex flex-col pr-6">
       <div class="w-full">
-        <button class="text-2xl bg-primary py-1 px-8 mr-5">DEMO</button>
         <button
-          class="text-2xl text-primary border-primary border-2 py-1 px-8 mr-5"
+          class="text-2xl bg-primary py-1 px-8 mr-5 hover:py-2 transition-all"
+        >
+          DEMO
+        </button>
+        <button
+          class="text-2xl text-primary border-primary border-2 py-1 px-8 mr-5 hover:py-2 transition-all"
         >
           CODIGO
         </button>
@@ -17,26 +43,5 @@
       <h2 class="text-5xl my-6">{{ selectecWork?.title }}</h2>
       <p class="text-grey">{{ selectecWork?.description }}</p>
     </div>
-    <ul
-      class="work-gal w-[30%] min-w-[350px] h-full flex flex-col gap-3 min-h-[400px]"
-    >
-      @for (work of worksList; track $index) {
-      <li
-        class="flex-grow border-primary border-2 border-opacity-25 rounded h-[100px] flex items-center justify-center p-4 transition-all active:p-4 hover:border-[3px]"
-        [ngClass]="{
-          'border-opacity-90 bg-primary bg-opacity-15 border-[2px] cursor-pointer p-3':
-            selectecWork?.title === work.title
-        }"
-        (mouseenter)="hoverItem(work)"
-      >
-        <img
-          [src]="work.logo"
-          [alt]="work.title"
-          class="w-full h-full object-contain"
-        />
-      </li>
-
-      }
-    </ul>
   </div>
 </div>

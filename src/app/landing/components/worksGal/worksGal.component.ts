@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ImagePipePipe } from './pipes/imagePipe.pipe';
 interface workItem {
   title: string;
   description: string;
@@ -12,9 +13,8 @@ interface workItem {
 @Component({
   selector: 'app-works-gal',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ImagePipePipe],
   templateUrl: './worksGal.component.html',
-  styleUrl: './worksGal.component.css',
 })
 export class WorksGalComponent implements OnInit {
   public selectecWork: workItem | undefined;
@@ -32,16 +32,17 @@ export class WorksGalComponent implements OnInit {
     {
       title: 'Chromatic2',
       description: 'A color palette generator',
-      image: 'chromatic.png',
-      logo: 'chromatic.png',
+      image: 'assets/gal-img/madmax.png',
+      logo: 'assets/logos/madmax.svg',
       demoLink: 'https://chromatic-9f8f9.web.app/',
       sourceLink: 'https://github.com/alexandru-georgescu/chromatic',
     },
     {
       title: 'Chromatic3',
       description: 'A color palette generator',
-      image: 'chromatic.png',
-      logo: 'chromatic.png',
+      image: 'assets/gal-img/madmax.png',
+      logo: 'assets/logos/madmax.svg',
+
       demoLink: 'https://chromatic-9f8f9.web.app/',
       sourceLink: 'https://github.com/alexandru-georgescu/chromatic',
     },
