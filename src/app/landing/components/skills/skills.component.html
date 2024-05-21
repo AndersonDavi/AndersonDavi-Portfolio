@@ -1,15 +1,15 @@
 <div class="skills-container h-full w-full flex flex-col md:flex-row mt-20">
   <div class="skills-list w-[100%] md:w-[40%] h-[250px]">
-    <ul class="flex flex-col h-full">
-      @for (option of skillOptions; track $index) {
+    <ul class="grid grid-cols-2 md:grid-cols-1 md:grid-rows-3 h-full">
+      @for (option of skillOptions; track $index; let last = $last) {
       <li
-        class="text-2xl flex flex-grow  items-center hover:border-b-[2px] hover:border-primary transition-transform duration-200 active:scale-100 active:duration-0 hover:scale-95 hover:bg-primary hover:bg-opacity-15 hover:pl-[10px] animate-fadeIn cursor-pointer"
+        class="text-2xl flex flex-grow justify-center md:justify-start md:col-span-1 items-center hover:border-b-[2px] hover:border-primary transition-transform duration-200 active:scale-100 active:duration-0 hover:scale-95 hover:bg-primary hover:bg-opacity-15 hover:pl-[10px] animate-fadeIn cursor-pointer w-full pl-0 md:pl-[5px]"
         [ngClass]="{
           'hover:border-b-[2px] hover:border-primary hover:scale-95 hover:bg-primary hover:bg-opacity-15 hover:pl-[10px]': true,
-          'border-b-[2px] border-primary scale-95 bg-primary bg-opacity-15 pl-[10px]':
-            lastHoverOption === option
+          'pl-15 border-b-[2px] border-primary scale-95 bg-primary bg-opacity-15':
+            lastHoverOption === option,
+          'col-span-2': last
         }"
-        [ngStyle]=""
         (mouseenter)="hoverOption(option)"
       >
         <span class="pointer-events-none">
@@ -20,7 +20,7 @@
     </ul>
   </div>
 
-  <div class="skills-item-list flex-grow">
+  <div class="skills-item-list flex-grow mt-10 md:mt-0">
     <ul class="h-full w-full grid grid-cols-3 md:grid-cols-5">
       @for (item of skillItemsToShow; track $index) {
       <li
