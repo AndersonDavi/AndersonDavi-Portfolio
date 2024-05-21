@@ -1,11 +1,11 @@
 <ul
-  class="mt-5 h-full overflow-hidden flex flex-col relative container mx-auto px-6 space-y-8"
+  class="mt-1 h-full overflow-hidden flex flex-col relative container mx-auto px-6 space-y-8 border-primary border-b-2 pb-6"
 >
   <div
-    class="absolute w-1 h-full bg-primary inset-0 shadow-md mx-auto left-0 right-0 z-0"
+    class="absolute w-1 h-[99%] bg-primary inset-0 shadow-md mx-auto left-0 right-0 -z-0"
   ></div>
   @for (item of experienceList; track $index;let odd = $odd;let last = $last) {
-  <div class="relative z-10 flex flex-col items-center md:block">
+  <div class="relative z-0 flex flex-col items-center md:block">
     <img
       [src]="item.img"
       alt=""
