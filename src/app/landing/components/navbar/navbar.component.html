@@ -1,9 +1,26 @@
+<img
+  src="../../../../assets/hamburger.svg"
+  alt="menu"
+  class="sm:hidden fixed z-50 right-1 m-2 text-primary h-[40px] transition-all"
+  [ngClass]="{
+    'scale-95': !showNavbar,
+  }"
+  (click)="toggleNavbar()"
+/>
 <div
-  class="nav-container h-[60px] w-full flex justify-between text-white fixed px-6"
+  class="nav-container h-[100%] sm:h-[60px] w-full flex flex-col sm:flex-row sm:justify-between text-white fixed px-6 bg-dark bg-opacity-75 sm:bg-opacity-70 transition-all sm:opacity-100"
+  [ngClass]="{
+    'opacity-0 -z-50': !showNavbar,
+    'z-40': showNavbar,
+  }"
 >
-  <img src="../../../../assets/icon1.png" alt="" class="h-full" />
-  <ul>
-    <li class="flex">
+  <img
+    src="../../../../assets/icon1.png"
+    alt=""
+    class="h-[60px] w-full sm:w-auto object-contain sm:h-full"
+  />
+  <ul class="">
+    <li class="flex flex-col sm:flex-row">
       <a
         href="#home"
         class="h-full p-5 flex justify-center items-center hover:scale-105 hover:border-primary hover:border-b-[1px] hover:bg-primary hover:bg-opacity-15 active:scale-100"

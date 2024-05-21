@@ -7,4 +7,9 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   imports: [CommonModule],
   templateUrl: './navbar.component.html',
 })
-export class NavbarComponent {}
+export class NavbarComponent {
+  public showNavbar: boolean = false;
+  public toggleNavbar(): void {
+    this.showNavbar = !this.showNavbar;
+  }
+}
