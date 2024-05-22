@@ -7,8 +7,8 @@ interface workItem {
   description: string;
   image: string;
   logo: string;
-  demoLink: string;
-  sourceLink: string;
+  demoLink?: string;
+  sourceLink?: string;
 }
 
 @Component({
@@ -38,7 +38,6 @@ export class WorksGalComponent implements OnInit {
       image: 'assets/gal-img/madmax.png',
       logo: 'assets/logos/madmax.svg',
       demoLink: 'https://chromatic-9f8f9.web.app/',
-      sourceLink: 'https://github.com/alexandru-georgescu/chromatic',
     },
     {
       id: 3,
@@ -55,7 +54,6 @@ export class WorksGalComponent implements OnInit {
       description: 'A color palette generator',
       image: 'assets/gal-img/madmax.png',
       logo: 'assets/logos/madmax.svg',
-      demoLink: 'https://chromatic-9f8f9.web.app/',
       sourceLink: 'https://github.com/alexandru-georgescu/chromatic',
     },
   ];
