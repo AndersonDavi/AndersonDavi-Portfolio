@@ -31,22 +31,22 @@
   <div class="work-info flex w-full pl-6 mt-8 col-span-3 order-1 min-h-[350px]">
     <div class="work-desc w-full flex flex-col pr-6">
       <div class="w-full">
-        <button
-          class="text-2xl bg-primary py-1 px-8 mr-5 hover:py-2 transition-all"
+        <a
+          [href]="selectecWork?.demoLink"
+          target="_blank"
+          class="text-2xl bg-primary py-1 px-8 mr-5 hover:py-2 transition-all text-center"
           [ngClass]="{
             hidden: !selectecWork?.demoLink
           }"
-        >
-          DEMO
-        </button>
-        <button
-          class="text-2xl text-primary border-primary border-2 py-1 px-8 mr-5 hover:py-2 transition-all"
+        >DEMO</a>
+        <a
+          [href]="selectecWork?.sourceLink"
+          target="_blank"
+          class="text-2xl text-primary border-primary border-2 py-1 px-8 mr-5 hover:py-2 transition-all text-center"
           [ngClass]="{
             hidden: !selectecWork?.sourceLink
           }"
-        >
-          CODIGO
-        </button>
+        >CODIGO</a>
       </div>
       <h2 class="text-5xl my-6">{{ selectecWork?.title }}</h2>
       <p class="text-grey">{{ selectecWork?.description }}</p>
