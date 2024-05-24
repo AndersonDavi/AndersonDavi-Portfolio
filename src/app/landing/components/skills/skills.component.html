@@ -27,9 +27,10 @@
         class="h-full flex flex-col items-center mt-5 cursor-pointer text-grey hover:text-primary hover:scale-105 transition-transform duration-150 hover:font-bold active:duration-0 active:scale-100"
       >
         <img
-          [src]="item.img"
-          [alt]="item.name"
-          class="h-[90px] pb-5 transition-transform duration-150"
+          loading="lazy"
+          [src]="'assets/skills/' + item.img"
+          [alt]="'skill icon '+item.name"
+          class="h-[90px] pb-5 transition-transform duration-150 w-20 object-contain"
         />
         <p class="transition-transform duration-150">
           {{ item.name }}

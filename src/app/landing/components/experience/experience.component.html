@@ -1,4 +1,4 @@
-<ul
+<div
   class="mt-1 h-full overflow-hidden flex flex-col relative container mx-auto px-6 space-y-8 border-primary border-b-2 pb-6"
 >
   <div
@@ -7,11 +7,12 @@
   @for (item of experienceList; track $index;let odd = $odd;let last = $last) {
   <div class="relative z-0 flex flex-col items-center md:block">
     <img
+      loading="lazy"
       [src]="item.img"
       alt=""
       class="relative md:block h-[60px] w-[60px] border-primary border-2 rounded-full p-2 my-5 bg-dark shadow-md md:mx-auto mleft-0 right-0;"
     />
-    <li
+    <div
       class="rounded border-2 border-primary p-4 my-5 bg-dark md:w-1/2 relative pt-2"
       [ngClass]="{
     'ml-auto': odd,
@@ -22,7 +23,7 @@
       </h2>
       <p class="text-primary text-lg">{{ item.periodo }}</p>
       <p class="">{{ item.description }}</p>
-    </li>
+    </div>
   </div>
   }
-</ul>
+</div>

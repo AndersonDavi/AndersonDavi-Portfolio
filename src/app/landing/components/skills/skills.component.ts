@@ -20,87 +20,87 @@ export class SkillsComponent implements OnInit {
   public skillItems: skillItem[] = [
     {
       name: 'HTML',
-      img: 'assets/html.png',
+      img: 'html.png',
       categoria: 'Front-end',
     },
     {
       name: 'CSS',
-      img: 'assets/css.png',
+      img: 'css.png',
       categoria: 'Front-end',
     },
     {
       name: 'JavaScript',
-      img: 'assets/js.png',
+      img: 'js.png',
       categoria: 'Front-end',
     },
     {
       name: 'TypeScript',
-      img: 'assets/ts.png',
+      img: 'ts.png',
       categoria: 'Front-end',
     },
     {
       name: 'Angular',
-      img: 'assets/angular.webp',
+      img: 'angular.webp',
       categoria: 'Front-end',
     },
     {
       name: 'Bootstrap',
-      img: 'assets/bootstrap.png',
+      img: 'bootstrap.png',
+      categoria: 'Front-end',
+    },
+    {
+      name: 'Tailwind',
+      img: 'tailwind.png',
       categoria: 'Front-end',
     },
     // {
-    //   name: 'Tailwind',
-    //   img: 'assets/tailwind.png',
-    //   categoria: 'Front-end',
+    //   name: 'Java',
+    //   img: 'java.png',
+    //   categoria: 'Back-end',
+    // },
+    // {
+    //   name: 'Spring',
+    //   img: 'spring.png',
+    //   categoria: 'Back-end',
+    // },
+    // {
+    //   name: 'Python',
+    //   img: 'python.png',
+    //   categoria: 'Back-end',
     // },
     {
-      name: 'Java',
-      img: 'assets/java.png',
-      categoria: 'Back-end',
-    },
-    {
-      name: 'Spring',
-      img: 'assets/spring.png',
-      categoria: 'Back-end',
-    },
-    {
-      name: 'Python',
-      img: 'assets/python.png',
-      categoria: 'Back-end',
-    },
-    {
       name: 'SQL Server',
-      img: 'assets/SQLserver.webp',
+      img: 'SQLserver.webp',
       categoria: 'Back-end',
     },
     {
       name: 'MySQL',
-      img: 'assets/mysql.png',
+      img: 'mysql.png',
       categoria: 'Back-end',
     },
     {
       name: 'Git',
-      img: 'assets/git.png',
+      img: 'git.png',
       categoria: 'Herramientas',
     },
     {
       name: 'GitHub',
-      img: 'assets/github.svg',
+      img: 'github.svg',
       categoria: 'Herramientas',
     },
     {
       name: 'Postman',
-      img: 'assets/post.png',
+      img: 'post.png',
       categoria: 'Herramientas',
     },
     {
       name: 'Figma',
-      img: 'assets/figma.webp',
+      img: 'figma.webp',
       categoria: 'Herramientas',
     },
     {
       name: 'Photoshop',
-      img: 'assets/ps.png',
+      img: 'ps.png',
       categoria: 'Herramientas',
     },
   ];
