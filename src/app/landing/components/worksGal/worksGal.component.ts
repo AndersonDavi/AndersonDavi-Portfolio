@@ -22,9 +22,19 @@ export class WorksGalComponent implements OnInit {
 
   public worksList: workItem[] = [
     {
+      id: 2,
+      title: 'Ediciones Kaziyadu',
+      description:
+        'Web para publicar libros gratuitos diseñada para la editorial Ediciones kaziyadu',
+      image: 'assets/gal-img/kaziyaduAppIMG.jpg',
+      logo: 'assets/logos/kaziyaduAppLogo.png',
+      demoLink: 'https://kaziyadu.vercel.app',
+    },
+    {
       id: 1,
       title: 'Gifs-App',
-      description: 'Proyecto personal como práctica de Angular, buscador de Gifs con historial y conexión a la API de Giphy',
+      description:
+        'Proyecto personal como práctica de Angular, buscador de Gifs con historial y conexión a la API de Giphy',
       image: 'assets/gal-img/gifsAppIMG.png',
       logo: 'assets/logos/gifsAppLogo.png',
       demoLink: 'https://andersondavi.github.io/GIFS-API/',
