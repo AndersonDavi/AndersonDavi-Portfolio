@@ -22,6 +22,15 @@ export class WorksGalComponent implements OnInit {
 
   public worksList: workItem[] = [
     {
+      id: 3,
+      title: 'Plataforma de reclutamiento y selección',
+      description:
+        'Colaboración en proyecto ATS para publicación de ofertas de empleo, corrección de estilos y mejoras en diseño',
+      image: 'assets/gal-img/ATSIMG.png',
+      logo: 'assets/logos/ATSLogo.png',
+      demoLink: 'https://www.empleogrupologis.com/#/home',
+    },
+    {
       id: 2,
       title: 'Ediciones Kaziyadu',
       description:
