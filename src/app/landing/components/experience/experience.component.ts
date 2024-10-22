@@ -16,12 +16,12 @@ export class ExperienceComponent {
   public experienceList: experienceItem[] = [
     {
       title: 'Tecnico análisis y desarrollo de software',
-      periodo: 'SENA - 2021 ene  / 2022 dic',
+      periodo: 'SENA - 2021 ene  / 2022 ene',
       img: 'assets/icon1.png',
     },
     {
       title: 'Desarrollador',
-      periodo: 'SENA - 2022 ene - jun',
+      periodo: 'SENA - 2022 ene / 2022 jun',
       img: 'assets/icon2.png',
       description:
         'Diseño de mockups e interfaces para web de DigibootCamp, iniciativa como plataforma para cursos cortos y bootcamps de progrmación',
@@ -32,6 +32,11 @@ export class ExperienceComponent {
       img: 'assets/icon2.png',
       description:
         'Automatizaciòn de procesos con Power Platform, diseño de interfaces, administraciòn de bases de datos SQL SERVER ',
+    },
+    {
+      title: 'Tecnólogo análisis y desarrollo de software',
+      periodo: 'SENA - 2022 oct / Actualidad',
+      img: 'assets/icon1.png',
     },
   ];
 }
