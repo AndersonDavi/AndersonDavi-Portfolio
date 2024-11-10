@@ -115,4 +115,7 @@ export class SkillsComponent implements OnInit {
       return item.categoria === data;
     });
   }
+  trackByFn(index: number, item: any): any {
+    return item.name; 
+  }
 }

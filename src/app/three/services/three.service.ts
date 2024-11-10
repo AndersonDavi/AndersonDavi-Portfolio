@@ -86,7 +86,7 @@ export class ThreeService implements OnDestroy {
       this.render();
     });
     this.particles.forEach((particle) => {
-      particle.rotation.z += 0.0015;
+      particle.rotation.z += 0.0005;
     });
     this.resize();
     this.renderer!.render(this.scene!, this.camera!);

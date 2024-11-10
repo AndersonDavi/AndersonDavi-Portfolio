@@ -24,6 +24,7 @@
     "@fontsource-variable/roboto-mono": "^5.0.19",
     "@fontsource/roboto": "^5.0.13",
     "rxjs": "~7.8.0",
+    "tailwindcss-motion": "^0.4.1-beta",
     "three": "^0.164.1",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"

@@ -9,9 +9,9 @@
   <ul
     class="col-span-1 w-full h-full flex md:flex-col gap-3 md:min-h-[400px] px-2 row-span-2 overflow-x-scroll scroll-smooth scroll md:overflow-x-hidden mb-9 md:mb-0"
   >
-    @for (work of worksList; track $index) {
+    @for (work of worksList; track work.id) {
     <li
-      class="border-primary border-2 border-opacity-25 rounded h-[150px] flex items-center justify-center p-5 transition-all active:p-4 hover:border-[3px] cursor-pointer hover:border-opacity-75 md:min-w-0 md:relative md:left-0 md:right-0 w-[150px] min-w-[150px] md:w-full"
+      class="border-primary border-2 border-opacity-25 rounded h-[150px] flex items-center justify-center p-5 transition-all active:p-4 hover:border-[3px] cursor-pointer hover:border-opacity-75 md:min-w-0 md:relative md:left-0 md:right-0 w-[150px] min-w-[150px] md:w-full motion-preset-expand motion-duration-1500"
       [ngClass]="{
         'border-opacity-90 bg-primary bg-opacity-15 border-[2px] p-[12px]':
           selectecWork?.id === work.id,
@@ -23,7 +23,7 @@
       <img
         [src]="work.logo"
         [alt]="work.title"
-        class="w-full h-full object-contain"
+        class="w-full h-full object-contain motion-preset-shrink motion-duration-2000"
       />
     </li>
     }
@@ -34,19 +34,21 @@
         <a
           [href]="selectecWork?.demoLink"
           target="_blank"
-          class="text-2xl bg-primary py-1 px-8 mr-5 hover:py-2 transition-all text-center"
+          class="text-2xl bg-primary py-1 px-8 mr-5 hover:py-2 transition-all text-center motion-preset-bounce motion-duration-500"
           [ngClass]="{
             hidden: !selectecWork?.demoLink
           }"
-        >DEMO</a>
+          >DEMO</a
+        >
         <a
           [href]="selectecWork?.sourceLink"
           target="_blank"
-          class="text-2xl text-primary border-primary border-2 py-1 px-8 mr-5 hover:py-2 transition-all text-center"
+          class="text-2xl text-primary border-primary border-2 py-1 px-8 mr-5 hover:py-2 transition-all text-center motion-preset-bounce motion-duration-500"
           [ngClass]="{
             hidden: !selectecWork?.sourceLink
           }"
-        >CODIGO</a>
+          >CODIGO</a
+        >
       </div>
       <h2 class="text-5xl my-6">{{ selectecWork?.title }}</h2>
       <p class="text-grey">{{ selectecWork?.description }}</p>
