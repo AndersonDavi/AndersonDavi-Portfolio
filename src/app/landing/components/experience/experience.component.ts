@@ -24,15 +24,15 @@ export class ExperienceComponent {
       skills: [
         {
           skill_name: 'HTML',
-          skill_img: 'html.png',
+          skill_img: 'html.webp',
         },
         {
           skill_name: 'CSS',
-          skill_img: 'css.png',
+          skill_img: 'css.webp',
         },
         {
           skill_name: 'JS',
-          skill_img: 'js.png',
+          skill_img: 'js.webp',
         },
       ],
     },
@@ -45,19 +45,19 @@ export class ExperienceComponent {
       skills: [
         {
           skill_name: 'HTML',
-          skill_img: 'html.png',
+          skill_img: 'html.webp',
         },
         {
           skill_name: 'CSS',
-          skill_img: 'css.png',
+          skill_img: 'css.webp',
         },
         {
           skill_name: 'JS',
-          skill_img: 'js.png',
+          skill_img: 'js.webp',
         },
         {
           skill_name: 'Git',
-          skill_img: 'git.png',
+          skill_img: 'git.webp',
         },
         {
           skill_name: 'GitHub',
@@ -69,11 +69,11 @@ export class ExperienceComponent {
         },
         {
           skill_name: 'Photoshop',
-          skill_img: 'ps.png',
+          skill_img: 'ps.webp',
         },
         {
           skill_name: 'Bootstrap',
-          skill_img: 'bootstrap.png',
+          skill_img: 'bootstrap.webp',
         },
       ],
     },
@@ -86,19 +86,19 @@ export class ExperienceComponent {
       skills: [
         {
           skill_name: 'HTML',
-          skill_img: 'html.png',
+          skill_img: 'html.webp',
         },
         {
           skill_name: 'CSS',
-          skill_img: 'css.png',
+          skill_img: 'css.webp',
         },
         {
           skill_name: 'JS',
-          skill_img: 'js.png',
+          skill_img: 'js.webp',
         },
         {
           skill_name: 'TypeScript',
-          skill_img: 'ts.png',
+          skill_img: 'ts.webp',
         },
         {
           skill_name: 'Angular',
@@ -106,11 +106,11 @@ export class ExperienceComponent {
         },
         {
           skill_name: 'Tailwind',
-          skill_img: 'tailwind.png',
+          skill_img: 'tailwind.webp',
         },
         {
           skill_name: 'Git',
-          skill_img: 'git.png',
+          skill_img: 'git.webp',
         },
         {
           skill_name: 'GitHub',
@@ -122,11 +122,11 @@ export class ExperienceComponent {
         },
         {
           skill_name: 'Photoshop',
-          skill_img: 'ps.png',
+          skill_img: 'ps.webp',
         },
         {
           skill_name: 'Postman',
-          skill_img: 'post.png',
+          skill_img: 'post.webp',
         },
         {
           skill_name: 'SQL Server',
@@ -141,19 +141,19 @@ export class ExperienceComponent {
       skills: [
         {
           skill_name: 'HTML',
-          skill_img: 'html.png',
+          skill_img: 'html.webp',
         },
         {
           skill_name: 'CSS',
-          skill_img: 'css.png',
+          skill_img: 'css.webp',
         },
         {
           skill_name: 'JS',
-          skill_img: 'js.png',
+          skill_img: 'js.webp',
         },
         {
           skill_name: 'TypeScript',
-          skill_img: 'ts.png',
+          skill_img: 'ts.webp',
         },
         {
           skill_name: 'Angular',
@@ -161,11 +161,11 @@ export class ExperienceComponent {
         },
         {
           skill_name: 'Tailwind',
-          skill_img: 'tailwind.png',
+          skill_img: 'tailwind.webp',
         },
         {
           skill_name: 'Git',
-          skill_img: 'git.png',
+          skill_img: 'git.webp',
         },
         {
           skill_name: 'GitHub',
@@ -177,11 +177,11 @@ export class ExperienceComponent {
         },
         {
           skill_name: 'Photoshop',
-          skill_img: 'ps.png',
+          skill_img: 'ps.webp',
         },
         {
           skill_name: 'Postman',
-          skill_img: 'post.png',
+          skill_img: 'post.webp',
         },
         {
           skill_name: 'SQL Server',
@@ -189,7 +189,7 @@ export class ExperienceComponent {
         },
         {
           skill_name: 'MySQL',
-          skill_img: 'mysql.png',
+          skill_img: 'mysql.webp',
         },
       ],
     },

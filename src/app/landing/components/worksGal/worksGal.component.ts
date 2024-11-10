@@ -28,21 +28,21 @@ export class WorksGalComponent implements OnInit {
       title: 'Plataforma de reclutamiento y selección',
       description:
         'Colaboración en proyecto ATS para publicación de ofertas de empleo, corrección de estilos y mejoras en diseño',
-      image: 'assets/gal-img/ATSIMG.png',
+      image: 'assets/gal-img/ATSIMG.webp',
       logo: 'assets/logos/ATSLogo.png',
       demoLink: 'https://www.empleogrupologis.com/#/home',
       skills: [
         {
           skill_name: 'HTML',
-          skill_img: 'html.png',
+          skill_img: 'html.webp',
         },
         {
           skill_name: 'CSS',
-          skill_img: 'css.png',
+          skill_img: 'css.webp',
         },
         {
           skill_name: 'JS',
-          skill_img: 'js.png',
+          skill_img: 'js.webp',
         },
         {
           skill_name: 'Angular',
@@ -50,7 +50,7 @@ export class WorksGalComponent implements OnInit {
         },
         {
           skill_name: 'TypeScript',
-          skill_img: 'ts.png',
+          skill_img: 'ts.webp',
         },
       ],
     },
@@ -59,21 +59,21 @@ export class WorksGalComponent implements OnInit {
       title: 'Ediciones Kaziyadu',
       description:
         'Web para publicar libros gratuitos diseñada para la editorial Ediciones kaziyadu',
-      image: 'assets/gal-img/kaziyaduAppIMG.jpg',
+      image: 'assets/gal-img/kaziyaduAppIMG.webp',
       logo: 'assets/logos/kaziyaduAppLogo.png',
       demoLink: 'https://kaziyadu.vercel.app',
       skills: [
         {
           skill_name: 'HTML',
-          skill_img: 'html.png',
+          skill_img: 'html.webp',
         },
         {
           skill_name: 'CSS',
-          skill_img: 'css.png',
+          skill_img: 'css.webp',
         },
         {
           skill_name: 'JS',
-          skill_img: 'js.png',
+          skill_img: 'js.webp',
         },
         {
           skill_name: 'Angular',
@@ -81,11 +81,11 @@ export class WorksGalComponent implements OnInit {
         },
         {
           skill_name: 'TypeScript',
-          skill_img: 'ts.png',
+          skill_img: 'ts.webp',
         },
         {
           skill_name: 'Tailwind',
-          skill_img: 'tailwind.png',
+          skill_img: 'tailwind.webp',
         },
       ],
     },
@@ -94,22 +94,22 @@ export class WorksGalComponent implements OnInit {
       title: 'Gifs-App',
       description:
         'Proyecto personal como práctica de Angular, buscador de Gifs con historial y conexión a la API de Giphy',
-      image: 'assets/gal-img/gifsAppIMG.png',
+      image: 'assets/gal-img/gifsAppIMG.webp',
       logo: 'assets/logos/gifsAppLogo.png',
       demoLink: 'https://andersondavi.github.io/GIFS-API/',
       sourceLink: 'https://github.com/AndersonDavi/GIFS-API',
       skills: [
         {
           skill_name: 'HTML',
-          skill_img: 'html.png',
+          skill_img: 'html.webp',
         },
         {
           skill_name: 'CSS',
-          skill_img: 'css.png',
+          skill_img: 'css.webp',
         },
         {
           skill_name: 'JS',
-          skill_img: 'js.png',
+          skill_img: 'js.webp',
         },
         {
           skill_name: 'Angular',
@@ -117,11 +117,11 @@ export class WorksGalComponent implements OnInit {
         },
         {
           skill_name: 'TypeScript',
-          skill_img: 'ts.png',
+          skill_img: 'ts.webp',
         },
         {
           skill_name: 'Bootstrap',
-          skill_img: 'bootstrap.png',
+          skill_img: 'bootstrap.webp',
         },
       ],
     },

@@ -20,22 +20,22 @@ export class SkillsComponent implements OnInit {
   public skillItems: skillItem[] = [
     {
       name: 'HTML',
-      img: 'html.png',
+      img: 'html.webp',
       categoria: 'Front-end',
     },
     {
       name: 'CSS',
-      img: 'css.png',
+      img: 'css.webp',
       categoria: 'Front-end',
     },
     {
       name: 'JavaScript',
-      img: 'js.png',
+      img: 'js.webp',
       categoria: 'Front-end',
     },
     {
       name: 'TypeScript',
-      img: 'ts.png',
+      img: 'ts.webp',
       categoria: 'Front-end',
     },
     {
@@ -45,27 +45,27 @@ export class SkillsComponent implements OnInit {
     },
     {
       name: 'Bootstrap',
-      img: 'bootstrap.png',
+      img: 'bootstrap.webp',
       categoria: 'Front-end',
     },
     {
       name: 'Tailwind',
-      img: 'tailwind.png',
+      img: 'tailwind.webp',
       categoria: 'Front-end',
     },
     // {
     //   name: 'Java',
-    //   img: 'java.png',
+    //   img: 'java.webp',
     //   categoria: 'Back-end',
     // },
     // {
     //   name: 'Spring',
-    //   img: 'spring.png',
+    //   img: 'spring.webp',
     //   categoria: 'Back-end',
     // },
     // {
     //   name: 'Python',
-    //   img: 'python.png',
+    //   img: 'python.webp',
     //   categoria: 'Back-end',
     // },
     {
@@ -75,12 +75,12 @@ export class SkillsComponent implements OnInit {
     },
     {
       name: 'MySQL',
-      img: 'mysql.png',
+      img: 'mysql.webp',
       categoria: 'Back-end',
     },
     {
       name: 'Git',
-      img: 'git.png',
+      img: 'git.webp',
       categoria: 'Herramientas',
     },
     {
@@ -90,7 +90,7 @@ export class SkillsComponent implements OnInit {
     },
     {
       name: 'Postman',
-      img: 'post.png',
+      img: 'post.webp',
       categoria: 'Herramientas',
     },
     {
@@ -100,7 +100,7 @@ export class SkillsComponent implements OnInit {
     },
     {
       name: 'Photoshop',
-      img: 'ps.png',
+      img: 'ps.webp',
       categoria: 'Herramientas',
     },
     

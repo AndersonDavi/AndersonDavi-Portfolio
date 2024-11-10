@@ -21,7 +21,7 @@
   </div>
 
   <div class="skills-item-list flex-grow mt-10 md:mt-0">
-    <ul class="h-full w-full grid grid-cols-3 md:grid-cols-5">
+    <ul class="h-full w-full grid grid-cols-3 md:grid-cols-5 gap-2">
       @for (item of skillItemsToShow; track item.name) {
       <li
         class="h-full flex flex-col items-center mt-5 cursor-pointer text-grey hover:text-primary hover:scale-105 transition-transform duration-150 hover:font-bold active:duration-0 active:scale-100 motion-preset-pop"
@@ -32,7 +32,7 @@
           [alt]="'skill icon ' + item.name"
           class="h-[90px] pb-5 transition-transform duration-150 w-20 object-contain motion-preset-expand motion-duration-500"
         />
-        <p class="transition-transform duration-150">
+        <p class="transition-transform duration-150 text-center">
           {{ item.name }}
         </p>
       </li>

@@ -47,7 +47,7 @@ export class ThreeService implements OnDestroy {
 
     const loader = new THREE.TextureLoader();
     loader.crossOrigin = '';
-    loader.load('./assets/humo.png', (texture) => {
+    loader.load('/assets/humo.png', (texture) => {
       const geo = new THREE.PlaneGeometry(300, 300);
       const material = new THREE.MeshLambertMaterial({
         map: texture,
