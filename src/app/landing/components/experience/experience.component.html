@@ -1,5 +1,5 @@
 <div
-  class="mt-1 h-full overflow-hidden flex flex-col relative container mx-auto px-6 space-y-8 border-primary border-b-2 pb-6"
+  class="mt-1 h-full overflow-hidden flex flex-col relative container mx-auto px-6 space-y-8 border-primary border-b-2 pb-6 motion-preset-slide-right motion-duration-1000"
 >
   <div
     class="absolute w-1 h-[99%] bg-primary inset-0 shadow-md mx-auto left-0 right-0 -z-0"
@@ -13,7 +13,7 @@
       class="relative md:block h-[60px] w-[60px] border-primary border-solid border-2 rounded-full p-2 my-5 bg-dark shadow-md md:mx-auto mleft-0 right-0;"
     />
     <div
-      class="rounded border-2 border-primary  p-4 my-5 bg-dark md:w-1/2 relative pt-2"
+      class="rounded border-2 border-primary p-4 my-5 bg-dark md:w-1/2 relative pt-2"
       [ngClass]="{
     'ml-auto': odd,
   }"
@@ -23,6 +23,11 @@
       </h2>
       <p class="text-primary text-lg">{{ item.periodo }}</p>
       <p class="">{{ item.description }}</p>
+      <div class="flex pt-2 gap-2 h-auto flex-wrap">
+        @for (skill of item.skills; track skill.skill_name) {
+        <app-skill-toast [name]="skill.skill_name" [img]="skill.skill_img" />
+        }
+      </div>
     </div>
   </div>
   }

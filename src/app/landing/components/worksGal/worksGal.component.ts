@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { ImagePipePipe } from './pipes/imagePipe.pipe';
+import { SkillToastComponent } from '../skill-toast/skill-toast.component';
+import { Skill } from '../../interfaces/Skill';
 interface workItem {
   id: number;
   title: string;
@@ -9,12 +10,13 @@ interface workItem {
   logo: string;
   demoLink?: string;
   sourceLink?: string;
+  skills?: Skill[];
 }
 
 @Component({
   selector: 'app-works-gal',
   standalone: true,
-  imports: [CommonModule, ImagePipePipe],
+  imports: [CommonModule, SkillToastComponent],
   templateUrl: './worksGal.component.html',
 })
 export class WorksGalComponent implements OnInit {
@@ -29,6 +31,28 @@ export class WorksGalComponent implements OnInit {
       image: 'assets/gal-img/ATSIMG.png',
       logo: 'assets/logos/ATSLogo.png',
       demoLink: 'https://www.empleogrupologis.com/#/home',
+      skills: [
+        {
+          skill_name: 'HTML',
+          skill_img: 'html.png',
+        },
+        {
+          skill_name: 'CSS',
+          skill_img: 'css.png',
+        },
+        {
+          skill_name: 'JS',
+          skill_img: 'js.png',
+        },
+        {
+          skill_name: 'Angular',
+          skill_img: 'angular.webp',
+        },
+        {
+          skill_name: 'TypeScript',
+          skill_img: 'ts.png',
+        },
+      ],
     },
     {
       id: 2,
@@ -38,6 +62,32 @@ export class WorksGalComponent implements OnInit {
       image: 'assets/gal-img/kaziyaduAppIMG.jpg',
       logo: 'assets/logos/kaziyaduAppLogo.png',
       demoLink: 'https://kaziyadu.vercel.app',
+      skills: [
+        {
+          skill_name: 'HTML',
+          skill_img: 'html.png',
+        },
+        {
+          skill_name: 'CSS',
+          skill_img: 'css.png',
+        },
+        {
+          skill_name: 'JS',
+          skill_img: 'js.png',
+        },
+        {
+          skill_name: 'Angular',
+          skill_img: 'angular.webp',
+        },
+        {
+          skill_name: 'TypeScript',
+          skill_img: 'ts.png',
+        },
+        {
+          skill_name: 'Tailwind',
+          skill_img: 'tailwind.png',
+        },
+      ],
     },
     {
       id: 1,
@@ -48,6 +98,32 @@ export class WorksGalComponent implements OnInit {
       logo: 'assets/logos/gifsAppLogo.png',
       demoLink: 'https://andersondavi.github.io/GIFS-API/',
       sourceLink: 'https://github.com/AndersonDavi/GIFS-API',
+      skills: [
+        {
+          skill_name: 'HTML',
+          skill_img: 'html.png',
+        },
+        {
+          skill_name: 'CSS',
+          skill_img: 'css.png',
+        },
+        {
+          skill_name: 'JS',
+          skill_img: 'js.png',
+        },
+        {
+          skill_name: 'Angular',
+          skill_img: 'angular.webp',
+        },
+        {
+          skill_name: 'TypeScript',
+          skill_img: 'ts.png',
+        },
+        {
+          skill_name: 'Bootstrap',
+          skill_img: 'bootstrap.png',
+        },
+      ],
     },
   ];
   ngOnInit(): void {

@@ -1,5 +1,5 @@
 <div
-  class="works-container h-full w-full grid grid-cols-1 md:grid-cols-4 md:grid-rows-2"
+  class="works-container h-full w-full grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 motion-preset-slide-right motion-duration-1000"
 >
   <img
     [src]="selectecWork?.image"
@@ -11,7 +11,7 @@
   >
     @for (work of worksList; track work.id) {
     <li
-      class="border-primary border-2 border-opacity-25 rounded h-[150px] flex items-center justify-center p-5 transition-all active:p-4 hover:border-[3px] cursor-pointer hover:border-opacity-75 md:min-w-0 md:relative md:left-0 md:right-0 w-[150px] min-w-[150px] md:w-full motion-preset-expand motion-duration-1500"
+      class="border-primary border-2 border-opacity-25 rounded h-[150px] flex items-center justify-center p-5 transition-all active:p-4 hover:border-[3px] cursor-pointer hover:border-opacity-75 md:min-w-0 md:relative md:left-0 md:right-0 w-[150px] min-w-[150px] md:w-full motion-preset-expand motion-duration-2000"
       [ngClass]="{
         'border-opacity-90 bg-primary bg-opacity-15 border-[2px] p-[12px]':
           selectecWork?.id === work.id,
@@ -28,8 +28,15 @@
     </li>
     }
   </ul>
-  <div class="work-info flex w-full pl-6 mt-8 col-span-3 order-1 min-h-[350px]">
+  <div class="work-info flex w-full pl-6 mt-4 col-span-3 order-1 min-h-[350px]">
     <div class="work-desc w-full flex flex-col pr-6">
+      @if (selectecWork?.skills) {
+      <div class="flex pb-4 gap-2 h-auto flex-wrap">
+        @for (skill of selectecWork!.skills; track skill.skill_name) {
+        <app-skill-toast [name]="skill.skill_name" [img]="skill.skill_img" />
+        }
+      </div>
+      }
       <div class="w-full">
         <a
           [href]="selectecWork?.demoLink"

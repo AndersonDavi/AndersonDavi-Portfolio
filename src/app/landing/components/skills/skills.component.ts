@@ -103,6 +103,7 @@ export class SkillsComponent implements OnInit {
       img: 'ps.png',
       categoria: 'Herramientas',
     },
+    
   ];
   ngOnInit(): void {
     this.skillItemsToShow = this.skillItems.filter((item) => {
