@@ -4,7 +4,6 @@
   id="home"
   class="h-[100vh] md:h-[600px] flex flex-grow md:flex-grow-0 flex-col md:flex-row md:max-w-[1200px] md:mx-auto px-5 md:px-0 motion-preset-slide-right motion-duration-1000"
 >
-  @defer (on viewport) {
   <div
     class="h-full w-full flex-grow flex flex-col items-center md:items-start md:justify-center justify-center md:pl-8"
   >
@@ -46,17 +45,12 @@
       />
     </a>
   </div>
-
-  } @placeholder{
-  <p></p>
-  }
 </section>
 
 <section
   id="conocimientos"
   class="pt-10 px-8 h-[800px] mb-[200px] md:mb-0 md:max-w-[1200px] md:mx-auto motion-preset-slide-right motion-duration-1000"
 >
-  @defer (on viewport) {
   <div class="h-auto text-center">
     <h2 class="text-6xl mb-3 font-semibold text-center inline-block">
       <app-hover-string text="Conocimientos" />
@@ -66,50 +60,42 @@
     </p>
   </div>
   <app-skills />
-  } @placeholder{
-  <p></p>
-  }
 </section>
 
 <section
   id="trabajos"
   class="pt-4 px-8 flex flex-col justify-center h-auto w-full md:max-w-[1200px] md:mx-auto motion-preset-slide-right motion-duration-1000"
 >
-  @defer (on viewport) {
-
-  <h2 class="text-center text-6xl mb-8 font-semibold motion-preset-slide-right motion-duration-1000">
+  <h2
+    class="text-center text-6xl mb-8 font-semibold motion-preset-slide-right motion-duration-1000"
+  >
     <app-hover-string text="Portafolio" />
   </h2>
   <app-works-gal />
-  } @placeholder{
-  <p></p>
-  }
 </section>
 
 <section
   id="experiencia"
   class="pt-4 px-8 flex flex-col items-center justify-center h-auto mt-8 md:max-w-[1200px] md:mx-auto motion-preset-slide-right motion-duration-1000"
 >
-  @defer (on viewport) {
-
-  <h2 class="text-center text-6xl mb-3 font-semibold my-1 inline-block motion-preset-slide-right motion-duration-1000">
+  <h2
+    class="text-center text-6xl mb-3 font-semibold my-1 inline-block motion-preset-slide-right motion-duration-1000"
+  >
     <app-hover-string text="Experiencia" />
   </h2>
-  <p class="text-3xl mb-3 font-thin text-grey my-1 text-center motion-preset-slide-right motion-duration-1000">
+  <p
+    class="text-3xl mb-3 font-thin text-grey my-1 text-center motion-preset-slide-right motion-duration-1000"
+  >
     Timeline educación y experiencia laboral
   </p>
   <p class="w-[50%] md:w-[20%] border-b-2 border-primary my-2"></p>
   <app-experience />
-  } @placeholder{
-  <p></p>
-  }
 </section>
 
 <section
   id="contactame"
   class="pt-4 px-8 flex flex-col items-center justify-center h-[100vh] md:max-w-[1200px] md:mx-auto"
 >
-  @defer (on viewport) {
   <h2 class="text-center text-6xl mb-3 font-semibold my-5 card-motion">
     <app-hover-string text="Contáctame" />
   </h2>
@@ -136,8 +122,5 @@
       />
     </a>
   </div>
-  } @placeholder{
-  <p></p>
-  }
 </section>
 <app-three />
