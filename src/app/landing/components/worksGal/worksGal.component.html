@@ -1,19 +1,19 @@
 <div
-  class="works-container h-full w-full grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 motion-preset-slide-right motion-duration-1000"
+  class="works-container h-full w-full grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 motion-preset-slide-right motion-duration-1000 select-none"
 >
   <img
     [src]="selectecWork?.image"
     alt="work"
-    class="col-span-3 w-full h-[500px] border-primary border-2 object-cover object-center hover:border-[0.3rem] transition-all hover:cursor-pointer order-1 md:mt-0"
+    class="col-span-3 w-full h-[500px] border-primary border-2 object-cover object-center hover:border-[0.3rem] transition-all hover:cursor-pointer order-1 md:mt-0 shadow-lg shadow-primary/15"
   />
   <ul
     class="col-span-1 w-full h-full flex md:flex-col gap-3 md:min-h-[400px] px-2 row-span-2 overflow-x-scroll scroll-smooth scroll md:overflow-x-hidden mb-9 md:mb-0"
   >
     @for (work of worksList; track work.id) {
     <li
-      class="border-primary border-2 border-opacity-25 rounded h-[150px] flex items-center justify-center p-5 transition-all active:p-4 hover:border-[3px] cursor-pointer hover:border-opacity-75 md:min-w-0 md:relative md:left-0 md:right-0 w-[150px] min-w-[150px] md:w-full motion-preset-expand motion-duration-2000"
+      class="border-primary border-2 border-opacity-25 rounded h-[150px] flex items-center justify-center p-5 transition-all active:p-4 hover:border-[3px] cursor-pointer hover:border-opacity-75 md:min-w-0 md:relative md:left-0 md:right-0 w-[150px] min-w-[150px] md:w-full motion-preset-expand motion-duration-2000 shadow-md shadow-primary/10 tra"
       [ngClass]="{
-        'border-opacity-90 bg-primary bg-opacity-15 border-[2px] p-[12px]':
+        'border-opacity-90 bg-primary bg-opacity-15 border-[2px] p-[12px] shadow-lg shadow-primary/20':
           selectecWork?.id === work.id,
         '-left-[95%]': work.id < selectecWork!.id,
         '-right-[95%]': work.id > selectecWork!.id
@@ -23,7 +23,7 @@
       <img
         [src]="work.logo"
         [alt]="work.title"
-        class="w-full h-full object-contain motion-preset-shrink motion-duration-2000"
+        class="w-full h-full object-contain motion-preset-shrink motion-duration-2000 "
       />
     </li>
     }
