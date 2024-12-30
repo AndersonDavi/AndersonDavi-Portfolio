@@ -5,6 +5,7 @@ import { SkillsComponent } from './landing/components/skills/skills.component';
 import { ExperienceComponent } from './landing/components/experience/experience.component';
 import { WorksGalComponent } from './landing/components/worksGal/worksGal.component';
 import { HoverStringComponent } from './shared/components/hoverString/hoverString.component';
+import { FooterComponent } from './landing/components/footer/footer.component';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -17,6 +18,7 @@ import { HoverStringComponent } from './shared/components/hoverString/hoverStrin
     ExperienceComponent,
     WorksGalComponent,
     HoverStringComponent,
+    FooterComponent,
   ],
 })
 export class AppComponent {
