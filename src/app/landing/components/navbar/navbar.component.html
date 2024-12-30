@@ -25,13 +25,15 @@
   </div>
 </nav>
 
-<nav class="md:p-2 fixed z-40 w-full h-full">
+<nav
+  class="md:p-2 fixed w-full h-full"
+  [ngClass]="{
+  'opacity-0 -z-50': !showNavbar,
+  'z-40': showNavbar,
+}"
+>
   <div
     class="nav-container h-[100%] md:h-[60px] w-full flex flex-col md:flex-row md:justify-between text-white px-6 bg-dark bg-opacity-75 md:bg-opacity-70 transition-all md:opacity-100 md:z-10 backdrop-blur-sm rounded-lg border-primary/10 border-solid border-2 max-w-[1920px] mx-auto"
-    [ngClass]="{
-    'opacity-0 -z-50': !showNavbar,
-    'z-40': showNavbar,
-  }"
   >
     <img
       src="assets/simbolo.svg"
