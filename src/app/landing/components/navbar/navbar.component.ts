@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +9,17 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 })
 export class NavbarComponent {
   public showNavbar: boolean = false;
+  public isMobile: boolean = window.innerWidth < 768;
+
   public toggleNavbar(): void {
     this.showNavbar = !this.showNavbar;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event): void {
+    this.isMobile = window.innerWidth < 768;
+    if (!this.isMobile) {
+      this.showNavbar = false;
+    }
   }
 }
