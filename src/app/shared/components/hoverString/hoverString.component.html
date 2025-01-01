@@ -1,6 +1,13 @@
 @for (character of getCharacters(); track character) {
 <span
   class="hover:text-primary hover:text-7xl cursor-default hover:transition-transform duration-75 inline select-none"
+  [ngClass]="{
+    'hover:text-primary': true,
+    'hover:text-7xl': growSize === '7xl',
+    'hover:text-8xl': growSize === '8xl',
+    'hover:text-9xl': growSize === '9xl',
+    'hover:text-[9rem]': growSize === '10xl',
+  }"
   >{{ character }}</span
 >
 }

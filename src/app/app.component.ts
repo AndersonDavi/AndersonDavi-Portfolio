@@ -6,6 +6,7 @@ import { ExperienceComponent } from './landing/components/experience/experience.
 import { WorksGalComponent } from './landing/components/worksGal/worksGal.component';
 import { HoverStringComponent } from './shared/components/hoverString/hoverString.component';
 import { FooterComponent } from './landing/components/footer/footer.component';
+import { ContactFormComponent } from "./landing/components/contact-form/contact-form.component";
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -19,7 +20,8 @@ import { FooterComponent } from './landing/components/footer/footer.component';
     WorksGalComponent,
     HoverStringComponent,
     FooterComponent,
-  ],
+    ContactFormComponent
+],
 })
 export class AppComponent {
   title = 'AndersonDavi';

@@ -7,10 +7,15 @@
   <div
     class="h-full w-full flex-grow flex flex-col items-center md:items-start md:justify-center justify-center md:pl-8"
   >
-    <h2 class="text-center text-6xl mb-3 font-semibold inline-block py-8">
-      <app-hover-string text="Anderson" />
+  <h2 class="text-center md:text-9xl md:text-left  text-7xl mb-3 font-semibold hidden md:inline-block">
+    <app-hover-string text="Anderson" growSize="10xl"/>
+    <br class="" />
+    <app-hover-string text=" Rueda" growSize="10xl" />
+  </h2>
+    <h2 class="text-center md:text-9xl md:text-left  text-7xl mb-3 font-semibold inline-block md:hidden ">
+      <app-hover-string text="Anderson" growSize="8xl"/>
       <br class="md:hidden" />
-      <app-hover-string text=" Rueda" />
+      <app-hover-string text=" Rueda" growSize="8xl" />
     </h2>
     <p class="text-3xl md:text-2xl mb-3 font-thin text-grey mt-12 md:mt-0">
       Desarrollador Front-end
@@ -53,7 +58,7 @@
 >
   <div class="h-auto text-center">
     <h2 class="text-6xl mb-3 font-semibold text-center inline-block">
-      <app-hover-string text="Conocimientos" />
+      <app-hover-string text="Conocimientos" growSize="7xl" />
     </h2>
     <p class="text-2xl mb-3 font-thin text-grey text-center">
       Lenguajes, frameworks y herramientas
@@ -69,7 +74,7 @@
   <h2
     class="text-center text-6xl mb-8 font-semibold motion-preset-slide-right motion-duration-1000"
   >
-    <app-hover-string text="Portafolio" />
+    <app-hover-string text="Portafolio" growSize="7xl" />
   </h2>
   <app-works-gal />
 </section>
@@ -81,7 +86,7 @@
   <h2
     class="text-center text-6xl mb-3 font-semibold my-1 inline-block motion-preset-slide-right motion-duration-1000"
   >
-    <app-hover-string text="Experiencia" />
+    <app-hover-string text="Experiencia" growSize="7xl" />
   </h2>
   <p
     class="text-3xl mb-3 font-thin text-grey my-1 text-center motion-preset-slide-right motion-duration-1000"
@@ -96,32 +101,7 @@
   id="contactame"
   class="pt-4 px-8 flex flex-col items-center justify-center h-[100vh] md:max-w-[1200px] md:mx-auto"
 >
-  <h2 class="text-center text-6xl mb-3 font-semibold my-5 card-motion">
-    <app-hover-string text="Contáctame" />
-  </h2>
-  <p class="text-3xl mb-3 font-thin text-grey my-5 card-motion">
-    andesondavid17&#64;gmail.com
-  </p>
-  <p class="w-[50%] border-b-2 border-primary my-5 card-motion"></p>
-  <div class="w-full flex justify-center my-5 card-motion">
-    <a href="https://github.com/AndersonDavi" target="_blank">
-      <img
-        src="assets/github.svg"
-        alt="github"
-        class="h-[60px] md:h-[40px] my-3 hover:scale-110 active:scale-105 mx-5"
-      />
-    </a>
-    <a
-      href="https://www.linkedin.com/in/anderson-david-rueda-consuegra-16b32821b/"
-      target="_blank"
-    >
-      <img
-        src="assets/linkedin.svg"
-        alt="github"
-        class="h-[60px] md:h-[40px] my-3 hover:scale-110 active:scale-105 mx-5"
-      />
-    </a>
-  </div>
+  <app-contact-form class="size-full" />
 </section>
 <app-three />
 <app-footer />

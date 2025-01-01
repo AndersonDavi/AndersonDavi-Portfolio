@@ -12,6 +12,9 @@ export class HoverStringComponent {
   @Input()
   public text: string = '';
 
+  @Input()
+  public growSize: string = '8xl'; // Nuevo input para el tamaño de crecimiento
+
   public getCharacters(): string[] {
     return this.text.split('');
   }

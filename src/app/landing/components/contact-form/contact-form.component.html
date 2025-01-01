@@ -1,0 +1,178 @@
+<div
+  class="size-full flex flex-col md:flex-row justify-center items-center"
+  *ngIf="!isSubmitted && !failed"
+>
+  <div
+    class="w-full md:w-1/2 md:h-full flex flex-col items-center justify-center"
+  >
+    <h2 class="text-center text-6xl mb-3 font-semibold my-5 card-motion">
+      <app-hover-string text="Contáctame" growSize="7xl" />
+    </h2>
+    <p class="text-gray-300 text-lg">Hagamos realidad tus ideas</p>
+    <p class="w-[50%] border-b-2 border-primary my-5 card-motion"></p>
+    <!-- <div class="w-full flex justify-center my-5 card-motion">
+    <a href="https://github.com/AndersonDavi" target="_blank">
+      <img
+        src="assets/github.svg"
+        alt="github"
+        class="h-[60px] md:h-[40px] my-3 hover:scale-110 active:scale-105 mx-5"
+      />
+    </a>
+    <a
+      href="https://www.linkedin.com/in/anderson-david-rueda-consuegra-16b32821b/"
+      target="_blank"
+    >
+      <img
+        src="assets/linkedin.svg"
+        alt="github"
+        class="h-[60px] md:h-[40px] my-3 hover:scale-110 active:scale-105 mx-5"
+      />
+    </a>
+  </div> -->
+  </div>
+  <form
+    [formGroup]="myForm"
+    class="p-30 flex flex-col w-full md:h-full p-2 gap-6 justify-center md:w-1/2"
+    (ngSubmit)="onSubmit()"
+  >
+    <div class="flex flex-col gap-2">
+      <label for="name">Nombre</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        formControlName="name"
+        [ngClass]="{ 'border-red-500': fieldIsValid('name') && myForm.touched }"
+        class="h-10 w-full bg-primary/20 border-solid border-2 border-primary/25 hover:border-primary/70 active:border-primary focus:shadow-md focus:shadow-primary/25 p-2 outline-none focus:outline-none"
+      />
+      <div *ngIf="fieldIsValid('name')" class="text-red-500">
+        {{ getFieldError("name") }}
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-2">
+      <label for="email">Correo</label>
+      <input
+        type="text"
+        name="email"
+        id="email"
+        formControlName="email"
+        [ngClass]="{
+          'border-red-500': fieldIsValid('email') && myForm.touched
+        }"
+        class="h-10 w-full bg-primary/20 border-solid border-2 border-primary/25 hover:border-primary/70 active:border-primary focus:shadow-md focus:shadow-primary/25 p-2 outline-none focus:outline-none"
+      />
+      <div *ngIf="fieldIsValid('email')" class="text-red-500">
+        {{ getFieldError("email") }}
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-2">
+      <label for="message">Mensaje</label>
+      <textarea
+        name="message"
+        id="message"
+        formControlName="message"
+        [ngClass]="{
+          'border-red-500': fieldIsValid('message') && myForm.touched
+        }"
+        class="h-20 max-h-60 w-full bg-primary/20 border-solid border-2 border-primary/25 hover:border-primary/70 active:border-primary focus:shadow-md focus:shadow-primary/25 p-2 outline-none focus:outline-none"
+      ></textarea>
+      <div *ngIf="fieldIsValid('message')" class="text-red-500">
+        {{ getFieldError("message") }}
+      </div>
+    </div>
+    <div class="flex flex-col-reverse lg:flex-row items-center">
+      <a
+        href="mailto:contactoandersonrueda@gmail.com/"
+        target="_blank"
+        class="lg:w-2/3 w-full p-2 hidden md:flex md:items-center md:justify-start text-wrap gap-1 pr-5"
+      >
+        <img
+          src="assets/email.svg"
+          alt="github"
+          class="my-3 h-[20px] w-[20px] object-contain hover:scale-110 mx-5 md:mx-0 active:scale-105"
+        />
+        <p class="text-wrap w-full break-words lg:pr-10">
+          contactoandersonrueda&#64;gmail.com
+        </p>
+      </a>
+      <button
+        type="submit"
+        class="lg:w-1/3 w-full text-2xl bg-primary py-1 px-8 hover:py-2 transition-all text-center motion-preset-bounce motion-duration-500"
+        [disabled]="isLoading"
+      >
+        Enviar
+      </button>
+    </div>
+  </form>
+</div>
+<section
+  *ngIf="isSubmitted"
+  class="flex flex-col md:flex-row justify-center items-center size-full"
+>
+  <div class="flex flex-col justify-center items-center">
+    <h2
+      class="text-center text-6xl mb-3 font-semibold my-5 card-motion motion-preset-bounce motion-duration-500"
+    >
+      <app-hover-string text="¡Todo listo!" growSize="7xl" />
+    </h2>
+    <p class="text-gray-300 text-lg motion-preset-bounce motion-duration-500">
+      Nos estaremos comunicando contigo
+    </p>
+    <p class="w-[50%] border-b-2 border-primary my-5 card-motion"></p>
+  </div>
+  <img
+    src="assets/email-submit.svg"
+    alt="submit-image"
+    class="w-1/2 max-h-96 mt-10 motion-preset-bounce motion-duration-500"
+  />
+</section>
+
+<section
+  *ngIf="failed"
+  class="flex flex-col md:flex-row justify-center items-center size-full"
+>
+  <div class="flex flex-col justify-center items-center">
+    <h2
+      class="text-center text-6xl mb-3 font-semibold my-5 card-motion motion-preset-bounce motion-duration-500"
+    >
+      <app-hover-string text="Algo salió mal :("  growSize="7xl"/>
+    </h2>
+    <p
+      class="text-gray-300 text-lg motion-preset-bounce motion-duration-500 text-center"
+    >
+      No pudimos enviar directamente tu mensaje, pero puedes contactarme en mis
+      redes sociales o enviarme un mensaje directo a mi correo
+    </p>
+    <p class="w-[50%] border-b-2 border-primary my-5 card-motion"></p>
+    <div class="w-[130px] flex justify-center card-motion">
+      <a
+        href="mailto:contactoandersonrueda@gmail.com"
+        class="h-[60px] w-[60px] flex items-center justify-center p-1"
+      >
+        <img
+          src="assets/email.svg"
+          alt="github"
+          class="my-3 hover:scale-110 mx-5 md:mx-0 h-full active:scale-105"
+        />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/anderson-david-rueda-consuegra-16b32821b/"
+        target="_blank"
+        class="h-[60px] w-[60px] flex items-center justify-center p-2"
+      >
+        <img
+          src="assets/linkedin.svg"
+          alt="github"
+          class="my-3 hover:scale-110 mx-5 md:mx-0 h-full active:scale-105"
+        />
+      </a>
+    </div>
+  </div>
+  <img
+    src="assets/email-error.svg"
+    alt="submit-image"
+    class="w-1/2 max-h-96 mt-10 motion-preset-bounce motion-duration-500"
+  />
+</section>
