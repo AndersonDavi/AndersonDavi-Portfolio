@@ -11,10 +11,8 @@ function getTargetPath(production = Boolean) {
 
 const envFileContent = `export const environment = {
   WEB3FORM_KEY: '${process.env["WEB3FORM_KEY"]}',
-  };`;
+};`;
 
 mkdirSync("./src/environments", { recursive: true });
 
-if (!existsSync(targetPath)) {
-  writeFileSync(targetPath, envFileContent);
-}
+writeFileSync(targetPath, envFileContent);
