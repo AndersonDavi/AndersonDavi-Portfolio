@@ -1,4 +1,4 @@
-const { writeFileSync, mkdirSync } = require("fs");
+const { writeFileSync, mkdirSync, existsSync } = require("fs");
 require("dotenv").config();
 
 const targetPath = getTargetPath(process.env["production"]);
@@ -11,7 +11,10 @@ function getTargetPath(production = Boolean) {
 
 const envFileContent = `export const environment = {
   WEB3FORM_KEY: '${process.env["WEB3FORM_KEY"]}',
-};`;
+  };`;
 
 mkdirSync("./src/environments", { recursive: true });
-writeFileSync(targetPath, envFileContent);
+
+if (!existsSync(targetPath)) {
+  writeFileSync(targetPath, envFileContent);
+}
